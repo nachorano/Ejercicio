@@ -32,7 +32,7 @@ body{
 
 /*SECTIONS Principals*/
 
-.section-intro, .section-info, .section-character, .section-models{
+.section-intro, .section-info, .section-character, .section-models, .section-footer{
     max-width: 100vw;
     display: flex;
     justify-content: center;
@@ -130,6 +130,7 @@ a.link-info:hover{
 
 .info p{
     font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
 /*section character*/
@@ -146,10 +147,16 @@ a.link-info:hover{
 
 .container-character h2{
     font-size: 2rem;
-    margin: 2rem 1.2rem;
+    margin: 4rem auto;
 }
 
 /*CARDS*/
+.container-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .card{
     display: flex;
@@ -158,13 +165,16 @@ a.link-info:hover{
     align-items: center;
     margin: 1.2rem;
     padding: 2rem 1rem;
-    border: 0.5px solid var(--gray-dark);
+    border: 0.08rem solid var(--gray-dark);
     box-shadow: 9px 8px 10px -3px rgba(0,0,0,0.54);
     transition: background-color 1.5s ease-out;
+    width: 100%;
+    height: 350px;
 }
 
 .card:hover{
     background-color: var(--gray-dark);
+    color: whitesmoke;
 }
 
 .border-l{
@@ -190,10 +200,8 @@ a.link-info:hover{
 }
 
 .card .icon-card{
-    font-size: 3rem;
-    padding: 1rem;
-    border: 0.5rem solid whitesmoke;
-    border-radius: 10rem;
+    font-size: 4rem;
+    margin: 1rem auto;
 }
 
 /*SECTION MODELS*/
@@ -222,6 +230,13 @@ a.link-info:hover{
     text-align: center;
 }
 
+.container-card-models{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1.2rem 0;
+}
 .card-models{
     display: flex;
     flex-direction: column;
@@ -229,8 +244,8 @@ a.link-info:hover{
     align-items: center;
     margin: 1.2rem;
     background: var(--gray-gradiant);
-    width: 40vw;
-    height: 40vw;
+    width: 30vw;
+    height: 30vw;
     border-radius: 0.8rem;
 }
 
@@ -250,10 +265,87 @@ a.link-info:hover{
 
 footer{
     background-color: var(--gray-medium);
-    margin: 0 auto;
-    padding: 1rem 0;
-    text-align: center;
+}
+
+.container-footer{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .containter-info-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.info-footer{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin-left: 2rem;
+}
+
+.info-footer h2{
+    margin: 2rem 0;
+    padding-top: 1rem;
+    font-size: 1.8rem;
+}
+
+.data-footer-client{
+    display: flex;
+    
+}
+
+.data-footer{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.5rem;
     font-size: 0.7rem;
+    
+}
+
+.data-footer h3{
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.data-footer span{
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.data-footer span i{
+    padding: 0 1rem;
+}
+
+.redes-footer{
+    margin: 1rem 0;
+}
+
+.link-redes{
+    color: whitesmoke;
+    font-size: 1.3rem;
+    padding: 0 0.5rem;
+    transition: color 0.5s ease-out;
+}
+
+.link-redes:hover{
+    color: var(--rich-black);
+}
+
+.img-footer{
+    display: none;
+}
+
+.footer-copy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    
 }
 
 /*MEDIA DESKTOP*/
@@ -286,7 +378,8 @@ footer{
     }
 
     .card{
-        width: 40%;
+        width: 35%;
+        height: 350px;
     }
 
     .container-card-models{
@@ -299,5 +392,40 @@ footer{
     .card-models{
         width: 20%;
         height: 200px;
+    }
+
+    /*FOOTER*/
+    .container-footer{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .containter-info-footer{
+        display: flex;
+        width: 80vw;
+        justify-content: space-between;
+        border-bottom: 0.05rem solid lightgray;
+        padding-bottom: 1rem;
+    }
+
+    .img-footer{
+        display: block;
+        background-image: url(./img/interior-cronos.jpg);
+        background-position: cover;
+        background-size: 110%;
+        background-repeat: no-repeat;
+        width: 40vw;
+    }
+
+    .data-footer{
+        margin-right: 4rem;
+        
+    }
+    
+    .footer-copy{
+        padding: 2rem 0;
+
+        
     }
 }
